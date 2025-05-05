@@ -51,3 +51,15 @@ id_edad INT,
 FOREIGN KEY (id_edad) REFERENCES pedidos(id_pedido)
 ON DELETE SET NULL ON UPDATE CASCADE
 );
+
+-- Tabla Línea de Pedido
+CREATE TABLE linea_pedido (
+id_linea_pedido INT AUTO_INCREMENT PRIMARY KEY,
+id_pedido INT NOT NULL,
+cantidad INT NOT NULL,
+precio_unidad DECIMAL(10,2) NOT NULL,
+iva_incluido TINYINT(1) DEFAULT 0,
+iva_aplicado DECIMAL(5,2) DEFAULT 0.00,
+FOREIGN KEY (id_pedido) REFERENCES pedidos(id_pedido)
+ON DELETE CASCADE ON UPDATE CASCADE,
+);
