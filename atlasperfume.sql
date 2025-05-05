@@ -23,3 +23,11 @@ precio DECIMAL(10,2) NOT NULL,
 id_pais INT,
 FOREIGN KEY (id_pais) REFERENCES pais(id_pais)
 );
+
+-- Tabla stock
+CREATE TABLE stock (
+id_perfume INT PRIMARY KEY,
+stock_actual INT NOT NULL,
+FOREIGN KEY (id_perfume) REFERENCES perfume(id_perfume)
+ON DELETE CASCADE ON UPDATE CASCADE
+);
