@@ -12,4 +12,9 @@ if ($conn->connect_error) {
     echo "Conexión exitosa a la base de datos."; // Confirmacio!!!!! de conexión exitosa
 }
 
+$email = $_POST['email']; //  correo electrónico
+$pass = $_POST['password']; // contraseña
+
+// encriptar la contraseña para mayor seguridad
+$pass_hashed = password_hash($pass, PASSWORD_DEFAULT);
 ?>
