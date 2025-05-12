@@ -44,12 +44,12 @@ ON DELETE CASCADE ON UPDATE CASCADE
 CREATE TABLE cliente (
 dni VARCHAR(20) PRIMARY KEY,
 nombre VARCHAR(100) NOT NULL,
-correo VARCHAR(100) NOT NULL,
+correo VARCHAR(100) NOT NULL UNIQUE,
 telefono VARCHAR(50),
 direccion VARCHAR(255),
-id_edad INT,
-FOREIGN KEY (id_edad) REFERENCES pedidos(id_pedido)
-ON DELETE SET NULL ON UPDATE CASCADE
+edad INT,
+password VARCHAR(255),
+es_admin BOOLEAN DEFAULT 0
 );
 
 -- Tabla Línea de Pedido
