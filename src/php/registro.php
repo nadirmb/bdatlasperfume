@@ -16,5 +16,17 @@ VALUES (?, ?, ?, ?, ?, ?, ?)"; // dejamos los espacios reservados para el sql
 $stmt = $conn->prepare($sql);
 $stmt->bind_param("sssssis", $dni, $nombre, $correo, $telefono, $direccion, $edad, $password); //
 // sssssis para deicr de que es cada tipo por ejemplo s de string o i de entero
+
+if ($stmt->execute()) {
+echo "Registro exitoso.";
+} else {
+echo "Error al registrar: " . $conn->error;
 }
-?> 
+
+//cerrar la consulta
+$stmt->close();
+
+//cerrar la conexión 
+$conn->close();
+}
+?>
