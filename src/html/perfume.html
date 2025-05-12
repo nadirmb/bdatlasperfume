@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROYECTO2</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+    <header>
+        <nav style="border-radius: 20px;" class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="navbar-brand">
+                <a href="#"><img src="../assets/img/logo.png" id="logo" alt="Logo"></a>
+                <div class="contenido-buscador d-none d-lg-flex">
+                    <button id="icono-busqueda"><img src="../assets/img/lupa.png" id="lupa"></button>
+                    <div id="buscador" style="display: none;">
+                        <form method="get" id="buscarform">
+                            <input type="text" id="inputaso" value="" placeholder="Buscar" />
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Título en móvil -->
+            <h1 class="titulo-movil d-lg-none mx-auto">Atlas Perfume</h1>
+
+            <!-- Botón para colapsar en dispositivos móviles -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <!-- Título y enlaces de navegación -->
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item d-lg-none">
+                        <a class="nav-link" href="../html/micesta.html">Mi Cesta</a>
+                    </li>
+                    <li class="nav-item d-lg-none">
+                        <a class="nav-link" href="../html/iniciarsesion.html">Entrar/Registrarse</a>
+                    </li>
+                    <li class="nav-item d-none d-lg-block"><a class="nav-link" href="../html/micesta.html">Mi Cesta</a>
+                    </li>
+                    <li class="nav-item d-none d-lg-block"><a class="nav-link"
+                            href="../html/iniciarsesion.html">Entrar/Registrarse</a></li>
+                </ul>
+            </div>
+
+            <!-- Título para escritorio -->
+            <h1 class="d-none d-lg-block">Atlas Perfume</h1>
+
+        </nav>
+    </header>
+
+
+    <br><br>
+    <main class="mt-5 container perfume-section">
+        <!-- Hero Section: Perfume Principal -->
+        <div class="row">
+            <div class="col-md-6 text-center">
+                <img src="../assets/img/fraganceparis4.png" alt="Perfume Principal" class="perfume-image">
+            </div>
+            <div class="col-md-6 d-flex flex-column justify-content-center align-items-center align-items-md-start">
+                <h2 class="perfume-title">Descubre tu Fragancia Única</h2>
+                <p class="perfume-subtitle">La esencia que te define</p>
+                <button class="btn btn-primary perfume-button">Ver Colección</button>
+            </div>
+        </div>
+
+        <!-- Sección de Productos -->
+        <section class="products-section mt-5">
+            <h3 class="text-center mb-4">Nuestros Perfumes</h3>
+            <div class="row carousel" id="carousel">
+                <!-- Producto 1 -->
+                <div class="col-md-3 col-12 product-card">
+                    <img src="../assets/img/escada.jpg" alt="Escada Bali Paradise" class="product-image">
+                    <h4>Escada</h4>
+                    <p>Bali Paradise</p>
+                    <p><span class="old-price">102,00€</span> <span class="new-price">59,95€</span></p>
+                    <div class="size-options">
+                        <button class="active">100 ml</button>
+                    </div>
+                </div>
+            
+                <!-- Producto 2 -->
+                <div class="col-md-3 product-card">
+                    <img src="../assets/img/iroha.jpg" alt="Iroha Nature Serum" class="product-image">
+                    <h4>Iroha Nature</h4>
+                    <p>Prevent & Correct Serum</p>
+                    <p><span class="old-price">34,00€</span> <span class="new-price">18,95€</span></p>
+                    <div class="size-options">
+                        <button>30 ml</button>
+                    </div>
+                </div>
+            
+                <!-- Producto 3 -->
+                <div class="col-md-3 product-card">
+                    <img src="../assets/img/dolce-gabbana.jpg" alt="Dolce & Gabbana Devotion Male Pour Homme" class="product-image">
+                    <h4>Dolce & Gabbana</h4>
+                    <p>Devotion Male Pour Homme</p>
+                    <p><span class="old-price">135,00€</span> <span class="new-price">84,95€</span></p>
+                    <div class="size-options">
+                        <button>50 ml</button>
+                    </div>
+                </div>
+            
+                <!-- Producto 4 -->
+                <div class="col-md-3 product-card">
+                    <img src="../assets/img/coach-men.jpg" alt="Coach Men" class="product-image">
+                    <h4>Coach Men</h4>
+                    <p>Eau de Parfum Hombre</p>
+                    <p><span class="old-price">79,00€</span> <span class="new-price">49,99€</span></p>
+                    <div class="size-options">
+                        <button>60 ml</button>
+                    </div>
+                </div>
+            
+                <!-- Producto 5 (oculto inicialmente) -->
+                <div class="col-md-3 product-card ocult-product">
+                    <img src="../assets/img/Turckis-fraganse.jpg" alt="Turckis fraganse" class="product-image">
+                    <h4>Turckis fraganse</h4>
+                    <p>Parfum Only Men</p>
+                    <p><span class="old-price">42,00€</span> <span class="new-price">37,99€</span></p>
+                    <div class="size-options">
+                        <button>70 ml</button>
+                    </div>
+                </div>
+            
+                <!-- Producto 6 (oculto inicialmente) -->
+                <div class="col-md-3 product-card ocult-product">
+                    <img src="../assets/img/Turckis-fraganse.jpg" alt="Turckis fraganse" class="product-image">
+                    <h4>SISI fragance</h4>
+                    <p>Samba dubrasil</p>
+                    <p><span class="old-price">40,00€</span> <span class="new-price">35,99€</span></p>
+                    <div class="size-options">
+                        <button>55 ml</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Flechas de Navegación -->
+            <div class="carousel-nav">
+                <button id="IzquierdaBtn" disabled class="carousel-btn">←</button>
+                <button id="DerechaBtn" class="carousel-btn">→</button>
+            </div>
+        </section>
+
+        <!-- Botones de Países -->
+        <section id="country-buttons-section" class="mt-5 text-center">
+            <h3>Explora por Países</h3>
+            <!-- Botones circulares -->
+            <button class="btn-country" data-country="francia">🇫🇷</button>
+            <button class="btn-country" data-country="italia">🇮🇹</button>
+            <button class="btn-country" data-country="japon">🇯🇵</button>
+            <button class="btn-country" data-country="usa">🇺🇸</button>
+        </section>
+
+        <!-- Sección de perfumes de Francia -->
+        <section class="country-section" data-country="francia">
+            <h3>Perfumes de Francia</h3>
+            <!-- Aquí agregarías los productos de Francia -->
+            <div class="col-md-3 product-card">
+                <img src="../assets/img/Turckis-fraganse.jpg" alt="Perfume Francia" class="product-image">
+                <h4>Perfume Francia</h4>
+                <p>Descripción del perfume</p>
+                <p><span class="old-price">60,00€</span> <span class="new-price">52,99€</span></p>
+                <div class="size-options">
+                    <button>50 ml</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de perfumes de Italia -->
+        <section class="country-section" data-country="italia">
+            <h3>Perfumes de Italia</h3>
+            <div class="col-md-3 product-card">
+                <img src="../assets/img/Turckis-fraganse.jpg" alt="Turckis fraganse" class="product-image">
+                <h4>Taliani Pizzini</h4>
+                <p>Only frangansi</p>
+                <p><span class="old-price">40,00€</span> <span class="new-price">39,99€</span></p>
+                <div class="size-options">
+                    <button>70 ml</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="country-section" data-country="japon">
+            <h3>Perfumes de Japón</h3>
+            <div class="col-md-3 product-card">
+                <img src="../assets/img/Turckis-fraganse.jpg" alt="Turckis fraganse" class="product-image">
+                <h4>japanise pirin-kun</h4>
+                <p>uwu fragance</p>
+                <p><span class="old-price">50,00€</span> <span class="new-price">43,99€</span></p>
+                <div class="size-options">
+                    <button>50 ml</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="country-section" data-country="usa">
+            <h3>Perfumes de USA</h3>
+            <div class="col-md-3 product-card">
+                <img src="../assets/img/Turckis-fraganse.jpg" alt="Turckis fraganse" class="product-image">
+                <h4>black police</h4>
+                <p>UA Smpson</p>
+                <p><span class="old-price">65,00€</span> <span class="new-price">55,99€</span></p>
+                <div class="size-options">
+                    <button>60 ml</button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+
+    <br><br>
+    <footer id="footer">
+
+        <div class="row">
+
+            <div class="col-md-4">
+                <h2>Información Legal</h2>
+                <p><a href="#">Términos y Condiciones</a></p>
+                <p><a href="#">Política de Privacidad</a></p>
+            </div>
+
+            <div class="col-md-4">
+                <h2>Contáctanos</h2>
+                <p>Email: <a href="mailto:atlasperfume@gmail.com">atlasperfume@gmail.com</a></p>
+                <p>Teléfono: <a href="tel:+34945884633">945-084-633</a></p>
+            </div>
+
+            <div class="col-md-4">
+                <h2>Redes</h2>
+                <div class="redes-sociales-icons">
+                    <a href="https://www.reddit.com/user/NoCarob8347/" target="_blank">
+                        <img src="#" class="redes" alt="Reddit">
+                    </a>
+                    <a href="https://www.instagram.com/protectbird_/" target="_blank">
+                        <img src="#" class="redes" alt="Instagram">
+                    </a>
+                    <a href="https://x.com/ProtectBird_" target="_blank">
+                        <img src="#" class="redes" alt="Twitter">
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <div class="col-12 text-center">
+                <p>___________________________________________________________________</p>
+                <p>Copyright &copy; 2025 Atlas Perfumess - All rights reserved</p>
+            </div>
+
+        </div>
+
+    </footer>
+
+    <!-- Bootstrap JS (jQuery, Popper.js, Bootstrap JS) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+    <!-- JS  -->
+    <script src="../js/main.js"></script>
+</body>
+
+</html>

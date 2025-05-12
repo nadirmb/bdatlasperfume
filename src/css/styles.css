@@ -1,0 +1,375 @@
+/*AJUSTE GENERAL*/
+body {
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 0;
+    background-image: url('../assets/img/atlasfondo3_desenfocado.jpg');
+    background-size: cover;
+    background-repeat: no-repeat; 
+    background-attachment: fixed;
+    padding-top: 20px;
+    margin-top: 80px;  
+}
+
+
+header {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 20px;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    z-index: 1000;
+    border-radius: 20%;
+}
+
+h1{
+    color: #333;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    justify-content: space-between;
+}
+
+/* Ajustes para el logo */
+#logo {
+    width: 90px;
+    height: auto;
+    margin-right: 10px;
+}
+
+/* Ajustes para el logo */
+#lupa {
+    width: 60%;
+    height: auto;
+    display: block;
+    margin: auto;
+}
+
+/* Contenedor principal para logo y búsqueda */
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+/* Estilos para el contenedor de búsqueda */
+.contenido-buscador {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+}
+
+#icono-busqueda {
+    font-size: 22px;
+    margin-right: 5px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+}
+
+#icono-busqueda:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+#icono-busqueda:hover {
+    background-color: rgba(90, 90, 194, 0.767);
+}
+
+/* Estilos para el input de búsqueda */
+#buscador {
+    display: none;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    z-index: 1;
+    margin-left: 5px;
+}
+
+#inputaso {
+    border-radius: 20px;
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    width: 210px;
+    font-size: 15px;
+    outline: none;
+}
+
+/* Estilos para el título */
+h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    white-space: nowrap;
+}
+
+/* Estilos para los enlaces de navegación */
+.navbar-nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav-item {
+    margin-left: 10px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+}
+
+/* Espacio reservado para el buscador */
+.navbar-brand {
+    width: 200px;
+}
+
+.navbar-nav li h1 {
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+}
+
+/*------------------------- EDITION PRODUCTS -------------------------*/
+
+/* Perfume Section */
+.perfume-section {
+    padding: 20px;
+    background-image: url('../assets/img/atlasfondo3.jpg');
+    background-size: cover;
+    background-repeat: no-repeat; 
+    background-attachment: fixed;
+    color: #fff;
+    max-width: 80%;
+    margin: auto; 
+    border-radius: 10px;
+    border: 3px solid #bcb9ba;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);    
+    transition: transform 0.3s ease-in-out;
+}
+
+.perfume-section:hover {
+    box-shadow: 0px 40px 50px rgba(0, 0, 0, 0.4);
+}
+
+.perfume-image {
+    width: 52%;
+    height: auto;
+}
+
+.perfume-title {
+    font-size: 2.5rem;
+}
+
+.perfume-subtitle {
+    font-size: 1.2rem;
+}
+
+.perfume-button {
+    background-color: #1364b5;
+    color: #fff;
+}
+
+/* Sección de Productos */
+.old-price {
+    text-decoration: line-through;
+}
+
+.new-price {
+    color: red;
+}
+
+/* Botones de Países */
+#country-buttons-section {
+    margin-top: 10px;
+}
+
+.country-section {
+    display: none;
+    text-align: center;
+    padding: 50px;
+}
+
+.country-section.active {
+    display: block;
+}
+
+/* Centrar los productos */
+.country-section .product-card {
+    margin: 0 auto;
+}
+
+/* Los botones de país */
+.btn-country {
+    width: 43px;
+    height: 45px;
+    border-radius: 50px;
+    margin: 10px;
+    background-color: #74889e;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-country:hover {
+    background-color: #0056b3;
+}
+
+/*---------------------FLECHAS CARUSEL-------------------------*/
+
+.products-section {   
+    overflow: hidden;
+    position: relative;
+    padding: 20px;
+    border-radius: 10px;
+    color:#fff;
+}
+
+#carousel {
+    display: flex;
+    overflow: hidden;
+    transition: transform 0.5s ease-in-out;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px;
+}
+
+.product-image {
+    width: 100%;
+    height: auto;
+}
+
+.carousel-nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.carousel-btn {
+    font-size: 3rem;
+    background-color: transparent;
+    border: none;
+    padding: 10px;
+    position: relative;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.carousel-btn:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.row.carousel {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.product-card {
+    text-align: center;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    flex: 0 0 22%; 
+    transition: transform 0.5s ease;
+    color: #333;
+    max-width: 22%;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #333;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.carousel-button-left {
+    left: 10px;
+}
+
+.carousel-button-right {
+    right: 10px;
+}
+
+/* Se ocultan los productos extra por defecto */
+.ocult-product {
+    display: none;
+}
+
+/* Para cuando los productos se muestran */
+.show-product {
+    display: block;
+}
+
+
+/*---------------------RESPONSIVE EDITS-------------------------*/
+
+@media (max-width: 768px) {
+
+    /* Título en móvil */
+    .titulo-movil {
+        font-size: 1.2em;
+        text-align: center;
+    }
+
+    .carousel {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-card {
+        width: 90%;
+        max-width: 400px;
+        margin: 15px 0;
+        padding: 15px;
+        text-align: center;
+        background-color: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .product-image {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .carousel-nav {
+        display: none; /* Oculta las flechas */
+    }
+
+    /* Asegura que los productos 5 y 6 también se muestren */
+    .ocult-product {
+        display: block !important;
+    }
+
+}
+
+/*---------------------FOOTER EDITS-------------------------*/
+
+#footer {
+    width: 100%;   
+    padding: 20px 20px;
+    position: absolute;
+    text-align: center;
+    background-color: #dce0e3;
+    margin-top: 20px;
+    box-shadow: 1px 0 0 solid rgba(0,0,0,0.1);
+    margin: 0 auto; 
+    color: #333;
+}
