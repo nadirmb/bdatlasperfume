@@ -1,9 +1,11 @@
 <?php
 // datos de la conexión a la base de datos
 $host = "localhost"; //localhoostt
-$user = "atlas"; //este es el usuario de la base de datos 
-$password = "atlas12345"; //contraseña de la base de datos
-$dbname = "atlas_perfume"; // aqui ponemos el nombre de la base de datos
+$user = "root"; //este es el usuario de la base de datos 
+$password = ""; //contraseña de la base de datos
+$db = "atlas_perfume"; // aqui ponemos el nombre de la base de datos
+
+$conn = new mysqli($host, $user, $pass, $db);
 
 // comprobar que la conexion es correcta
 if ($conn->connect_error) {
@@ -12,9 +14,4 @@ if ($conn->connect_error) {
     echo "Conexión exitosa a la base de datos."; // Confirmacio!!!!! de conexión exitosa
 }
 
-$email = $_POST['email']; //  correo electrónico
-$pass = $_POST['password']; // contraseña
-
-// encriptar la contraseña para mayor seguridad
-$pass_hashed = password_hash($pass, PASSWORD_DEFAULT);
 ?>
