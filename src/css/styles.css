@@ -11,9 +11,7 @@ body {
     margin-top: 80px;  
 }
 
-
 header {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     position: fixed;
     top: 20px;
     left: 0;
@@ -21,10 +19,6 @@ header {
     padding: 20px;
     z-index: 1000;
     border-radius: 20%;
-}
-
-h1{
-    color: #333;
 }
 
 .navbar {
@@ -103,6 +97,7 @@ h1{
 
 /* Estilos para el título */
 h1 {
+    color: #000000;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -123,7 +118,7 @@ h1 {
 
 .nav-link {
     text-decoration: none;
-    color: #333;
+    color: black;
     font-size: 16px;
 }
 
@@ -179,10 +174,6 @@ h1 {
 }
 
 /* Sección de Productos */
-.old-price {
-    text-decoration: line-through;
-}
-
 .new-price {
     color: red;
 }
@@ -196,6 +187,12 @@ h1 {
     display: none;
     text-align: center;
     padding: 50px;
+}
+
+.contenedor-pais {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .country-section.active {
@@ -276,6 +273,7 @@ h1 {
 .product-card {
     text-align: center;
     background-color: #f9f9f9;
+    margin: 10px;
     padding: 15px;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -284,6 +282,20 @@ h1 {
     transition: transform 0.5s ease;
     color: #333;
     max-width: 22%;
+}
+
+.product-card2 {
+    text-align: center;
+    background-color: #f9f9f9;
+    margin: 10px 5px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    flex: 0 0 18%; 
+    transition: transform 0.5s ease;
+    color: #333;
+    max-width: 18%;
 }
 
 .carousel-button {
@@ -363,13 +375,12 @@ h1 {
 /*---------------------FOOTER EDITS-------------------------*/
 
 #footer {
-    width: 100%;   
+    width: 100%;
     padding: 20px 20px;
-    position: absolute;
-    text-align: center;
     background-color: #dce0e3;
-    margin-top: 20px;
-    box-shadow: 1px 0 0 solid rgba(0,0,0,0.1);
-    margin: 0 auto; 
+    text-align: center;
     color: #333;
+    margin-top: auto; 
+    box-shadow: 1px 0 0 rgba(0, 0, 0, 0.1);
 }
+
