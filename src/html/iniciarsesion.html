@@ -14,18 +14,18 @@
 <body>
    
     <div class="form-container">
-        <form class="login-form">
+<form class="login-form" action="../php/login.php" method="POST">
             <div class="d-flex align-items-center justify-content-between" >
                 <a href="../html/perfume.html"class="order-2"><img src="../assets/img/logo.png" id="logoForm" alt="Logo"></a>
                 <h2 class="mb-4 order-1">Bienvenido a Atlas Perfume</h2>
             </div>
 
             <div class="form-group">
-                <input type="text" class="form-control" placeholder="Nombre de usuario" required>
-            </div>
+                <label for="usuario"><strong>Correo electrónico:</strong></label>
+                <input type="text" name="usuario" class="form-control" placeholder="Correo electrónico" required>            </div>
             <div class="form-group">
-                <input type="password" class="form-control" placeholder="Contraseña" required>
-            </div>
+                <label for="clave"><strong>Contraseña:</strong></label>
+                <input type="password" name="clave" class="form-control" placeholder="Contraseña" required>            </div>
             <button type="submit" class="btn btn-primary btn-block" data-hover="Atlas Perfume!"><div>Inicia sesión!</div></button>
             <div class="register-link mt-3 text-center">
                 <p>¿No te has registrado? <a href="../html/registrarse.html">Regístrate aquí</a></p>
