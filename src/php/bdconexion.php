@@ -1,8 +1,8 @@
 <?php
 // datos de la conexión a la base de datos
 $host = "localhost"; //localhoostt
-$user = "root"; //este es el usuario de la base de datos 
-$password = ""; //contraseña de la base de datos
+$user = "usuario"; //este es el usuario de la base de datos 
+$password = "1234"; //contraseña de la base de datos
 $db = "atlas_perfume"; // aqui ponemos el nombre de la base de datos
 
 $conn = new mysqli($host, $user, $password, $db);
