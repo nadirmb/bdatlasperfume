@@ -22,6 +22,8 @@ nombre VARCHAR(100) NOT NULL,
 precio DECIMAL(10,2) NOT NULL,
 id_pais INT,
 FOREIGN KEY (id_pais) REFERENCES pais(id_pais)
+ON DELETE SET NULL
+ON UPDATE CASCADE
 );
 
 -- Tabla stock
@@ -29,7 +31,8 @@ CREATE TABLE stock (
 id_perfume INT PRIMARY KEY,
 stock_actual INT NOT NULL,
 FOREIGN KEY (id_perfume) REFERENCES perfume(id_perfume)
-ON DELETE CASCADE ON UPDATE CASCADE
+ON DELETE CASCADE 
+ON UPDATE CASCADE
 );
 
 -- Tabla Pedidos
@@ -61,5 +64,6 @@ precio_unidad DECIMAL(10,2) NOT NULL,
 iva_incluido TINYINT(1) DEFAULT 0,
 iva_aplicado DECIMAL(5,2) DEFAULT 0.00,
 FOREIGN KEY (id_pedido) REFERENCES pedidos(id_pedido)
-ON DELETE CASCADE ON UPDATE CASCADE,
+ON DELETE CASCADE 
+ON UPDATE CASCADE,
 );
