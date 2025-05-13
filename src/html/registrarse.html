@@ -15,58 +15,47 @@
 
     <main>
         <div class="form-container">
-            <form class="login-form" id="registro-form">
-                
-                <div class="d-flex align-items-center justify-content-between" >
-                    <a href="../html/perfume.html"class="order-2"><img src="../assets/img/logo.png" id="logoForm" alt="Logo"></a>
+            <form class="login-form" id="registro-form" action="../php/registro.php" method="POST">
+                <div class="d-flex align-items-center justify-content-between">
+                    <a href="../html/perfume.html" class="order-2">
+                        <img src="../assets/img/logo.png" id="logoForm" alt="Logo">
+                    </a>
                     <h2 class="mb-4 order-1">Bienvenido a Atlas Perfume</h2>
                 </div>
-
                 <div class="form-group">
                     <label><strong>Nombre:</strong></label>
-                    <input type="text" class="form-control" placeholder="Nombre" pattern="\w{3,16}" required>
-
+                    <input type="text" class="form-control" name="nombre" placeholder="Nombre" pattern="\w{3,16}" required>
                     <label><strong>Edad:</strong></label>
-                    <input type="number" class="form-control" id="edad" placeholder="Edad" min="18" required>
-
+                    <input type="number" class="form-control" name="edad" placeholder="Edad" min="18" required>
                     <label><strong>Género:</strong></label>
-                    <select class="form-control" required>
+                    <select class="form-control" name="genero" required>
                         <option value="">Selecciona tu sexo</option>
                         <option value="masculino">Masculino</option>
                         <option value="femenino">Femenino</option>
                     </select>
-
                     <label><strong>Email:</strong></label>
-                    <input type="email" class="form-control" id="email" placeholder="Correo electrónico" required>
-
+                    <input type="email" class="form-control" name="correo" placeholder="Correo electrónico" required>
                     <label><strong>Contraseña (8 dígitos numéricos):</strong></label>
-                    <input type="password" class="form-control" id="password" placeholder="Contraseña" pattern="\d{8,8}"
-                        required>
-
+                    <input type="password" class="form-control" name="password" placeholder="Contraseña" pattern="\d{8,8}" required>
                     <label><strong>Confirmar Contraseña:</strong></label>
-                    <input type="password" class="form-control" id="confirm-password" placeholder="Confirmar contraseña"
-                        required>
-
-                    <div class="checkbox-wrapper">
-                        <label>
-                            He leído y acepto la <a href="#">Política de Privacidad</a>
-                            <input type="checkbox">
-                            <span class="custom-checkbox"></span>
-                        </label>
-                    </div>
-
+                    <input type="password" class="form-control" name="confirm_password" placeholder="Confirmar contraseña" required>
+                <div class="checkbox-wrapper">
+                    <label>
+                        He leído y acepto la <a href="#">Política de Privacidad</a>
+                        <input type="checkbox" name="terminos" required>
+                        <span class="custom-checkbox"></span>
+                    </label>
                 </div>
-                <button class="btn btn-primary btn-block" type="submit" data-hover="Atlas Perfume!">
-                    <div>Registrate!</div>
-                </button>
-
-                <div class="register-link mt-3 text-center">
-                    <p>¿Ya tienes cuenta? <a href="../html/iniciarsesion.html">Iniciar sesión aquí</a></p>
-                </div>
-            </form>
-        </div>
+            </div>
+            <button class="btn btn-primary btn-block" type="submit">
+        <div>¡Regístrate!</div>
+    </button>
+    <div class="register-link mt-3 text-center">
+        <p>¿Ya tienes cuenta? <a href="../html/iniciarsesion.html">Iniciar sesión aquí</a></p>
+    </div>
+</form>
+</div>
     </main>
-
 
     <br><br>
 
