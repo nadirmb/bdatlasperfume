@@ -1,5 +1,5 @@
 <?php
-include "../php/bdconexion.php"; // incluimos ya el archivo de conexion de bd.conexion.php para poderhacear el registro
+include "/php/bdconexion.php"; // incluimos ya el archivo de conexion de bd.conexion.php para poderhacear el registro
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 $dni = $_POST["dni"];
