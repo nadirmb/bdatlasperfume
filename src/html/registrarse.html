@@ -23,37 +23,47 @@
                     <h2 class="mb-4 order-1">Bienvenido a Atlas Perfume</h2>
                 </div>
                 <div class="form-group">
+                    
                     <label><strong>DNI:</strong></label>
-                    <input type="text" class="form-control" name="dni" placeholder="12345678X" required>
+                    <input type="text" class="form-control" name="dni" placeholder="12345678X" pattern="[0-9]{8}[A-Za-z]{1}">
+                    
                     <label><strong>Nombre:</strong></label>
                     <input type="text" class="form-control" name="nombre" placeholder="Nombre" pattern="\w{3,16}" required>
+                    
                     <label><strong>Edad:</strong></label>
                     <input type="number" class="form-control" name="edad" placeholder="Edad" min="18" required>
+                    
                     <label><strong>Teléfono:</strong></label>
                     <input type="text" class="form-control" name="telefono" placeholder="Teléfono" required>
+                    
                     <label><strong>Dirección:</strong></label>
                     <input type="text" class="form-control" name="direccion" placeholder="Dirección" required>
+                    
                     <label><strong>Género:</strong></label>
                     <select class="form-control" name="genero" required>
                         <option value="">Selecciona tu sexo</option>
                         <option value="masculino">Masculino</option>
                         <option value="femenino">Femenino</option>
                     </select>
+                    
                     <label><strong>Email:</strong></label>
                     <input type="email" class="form-control" name="correo" placeholder="Correo electrónico" required>
+                    
                     <label><strong>Contraseña (8 dígitos numéricos):</strong></label>
                     <input type="password" class="form-control" name="password" placeholder="Contraseña" pattern="\d{8,8}" required>
+                    
                     <label><strong>Confirmar Contraseña:</strong></label>
                     <input type="password" class="form-control" name="confirm_password" placeholder="Confirmar contraseña" required>
-                    <div class="checkbox-wrapper mt-2">
+                    
+                    <div class="checkbox-wrapper">
                         <label>
-                            <input type="checkbox" name="terminos" required>
                             He leído y acepto la <a href="/terminos/privacidad.html">Política de Privacidad</a>
+                            <input type="checkbox" required>
                             <span class="custom-checkbox"></span>
                         </label>
                     </div>
                 </div>
-                <button class="btn btn-primary btn-block" type="submit">
+                <button class="btn btn-primary btn-block" type="submit" data-hover="Atlas Perfume!">
                     <div>¡Regístrate!</div>
                 </button>
                 <div class="register-link mt-3 text-center">
