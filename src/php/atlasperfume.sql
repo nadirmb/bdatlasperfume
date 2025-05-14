@@ -58,6 +58,7 @@ es_admin BOOLEAN DEFAULT 0
 CREATE TABLE linea_pedido (
 id_linea_pedido INT AUTO_INCREMENT PRIMARY KEY,
 id_pedido INT NOT NULL,
+id_perfume  INT NOT NULL,
 cantidad INT NOT NULL,
 precio_unidad DECIMAL(10,2) NOT NULL,
 iva_incluido TINYINT(1) DEFAULT 0,
