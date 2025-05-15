@@ -20,8 +20,10 @@ while ($row = $result->fetch_assoc()) {
         <td>{$row['nombre']}</td>
         <td>{$row['precio']}</td>
         <td>{$row['stock_actual']}</td>
-        <td><a href='/crud/eliminar_perfume.php?id={$row['id_perfume']}'>Eliminar</a></td>
-    </tr>";
+        <td>
+        <a href='/crud/eliminar_perfume.php?id={$row['id_perfume']}'>Eliminar</a>
+        <a href='/crud/crear_perfume.php'>Añadir </a>  
+        </tr>";
 }
 
 // cerramos tabla

@@ -25,14 +25,29 @@ $id_pedido = $stmt->insert_id; // id generado
 
 // recorremos la cesta
 foreach ($_SESSION['cesta'] as $id_perfume => $cantidad) {
-    // obtenemos precio actual del perfume
-    $sql_precio = "SELECT precio FROM perfume WHERE id_perfume = ?";
-    $stmt = $conn->prepare($sql_precio);
+    // obtenemos nombre, precio y stock actual del perfume
+    $sql = "SELECT nombre, precio, stock_actual 
+            FROM perfume 
+            JOIN stock ON perfume.id_perfume = stock.id_perfume 
+            WHERE perfume.id_perfume = ?";
+    $stmt = $conn->prepare($sql);
     $stmt->bind_param("i", $id_perfume);
     $stmt->execute();
     $res = $stmt->get_result();
     $fila = $res->fetch_assoc();
+
+    $nombre = $fila['nombre'];
     $precio = $fila['precio'];
+    $stock_actual = $fila['stock_actual'];
+
+    // verificar si hay suficiente stock
+    if ($stock_actual < $cantidad) {
+        echo "<script>
+            alert('No hay suficiente stock de \"$nombre\". Solo quedan $stock_actual unidades.');
+            window.location.href = '/php/micesta.php';
+        </script>";
+        exit();
+    }
 
     // insertamos en linea_pedido
     $sql_linea = "INSERT INTO linea_pedido (id_pedido, id_perfume, cantidad, precio_unidad)

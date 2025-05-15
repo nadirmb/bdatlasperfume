@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html>
 
@@ -31,13 +32,24 @@
                     <li class="nav-item d-lg-none">
                         <a class="nav-link" href="/php/micesta.php">Mi Cesta</a>
                     </li>
-                    <li class="nav-item d-lg-none">
-                        <a class="nav-link" href="/html/iniciarsesion.html">Entrar/Registrarse</a>
-                    </li>
-                    <li class="nav-item d-none d-lg-block"><a class="nav-link" href="/php/micesta.php">Mi Cesta</a>
-                    </li>
-                    <li class="nav-item d-none d-lg-block"><a class="nav-link"
-                            href="/html/iniciarsesion.html">Entrar/Registrarse</a></li>
+
+                    <?php if (isset($_SESSION['usuario'])): ?>
+                        <!-- Mostrar solo cerrar sesión si ha iniciado -->
+                        <li class="nav-item d-lg-none">
+                            <a class="nav-link" href="/php/cerrar_sesion.php">Cerrar sesión</a>
+                        </li>
+                        <li class="nav-item d-none d-lg-block">
+                            <a class="nav-link" href="/php/cerrar_sesion.php">Cerrar sesión</a>
+                        </li>
+                    <?php else: ?>
+                        <!-- Mostrar entrar/registrarse si no ha iniciado -->
+                        <li class="nav-item d-lg-none">
+                            <a class="nav-link" href="/html/iniciarsesion.html">Entrar/Registrarse</a>
+                        </li>
+                        <li class="nav-item d-none d-lg-block">
+                            <a class="nav-link" href="/html/iniciarsesion.html">Entrar/Registrarse</a>
+                        </li>
+                    <?php endif; ?>
                 </ul>
             </div>
 

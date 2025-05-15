@@ -23,7 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if (password_verify($clave, $row['password'])) {
             // si la contraseña es correcta pues se guarda la sesion y nos rediriigmos a perfuee.html
             $_SESSION['usuario'] = $usuario;
-            header("Location: /html/perfume.html");
+            header("Location: /php/perfume.php");
             exit();
         } else {
             echo "Contraseña incorrecta.";
