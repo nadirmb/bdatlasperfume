@@ -1,5 +1,9 @@
 <?php
 session_start(); // iniciar sesión
+if (!isset($_SESSION['usuario'])) {
+    header("Location: /html/iniciarsesion.html");
+    exit();
+}
 
 // si no hay cesta aún, la creamos
 if (!isset($_SESSION['cesta'])) {

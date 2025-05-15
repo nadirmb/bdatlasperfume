@@ -1,6 +1,10 @@
 <?php
 // iniciamos sesión para acceder a la cesta
 session_start();
+if (!isset($_SESSION['usuario'])) {
+    echo "<script>alert('Debes iniciar sesión para finalizar la compra'); window.location.href = '/html/iniciarsesion.html';</script>";
+    exit();
+}
 include 'bdconexion.php'; // conexión a la base de datos
 
 // comprobamos si hay productos en la cesta
