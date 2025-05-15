@@ -50,5 +50,6 @@ unset($_SESSION['cesta']);
 // mostramos mensaje de confirmación
 echo "<h2>¡Gracias por tu compra!</h2>";
 echo "<p>Tu pedido se ha registrado correctamente.</p>";
-echo "<a href='/html/perfume.html'>Volver a la tienda</a>";
+echo "<a href='/php/perfume.php'>Volver a la tienda</a>";
 ?>
+

@@ -4,58 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PROYECTO2</title>
+    <title>Atlas Perfume</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/styles.css">
 </head>
 
 <body>
-    <header>
-        <nav style="border-radius: 20px; background-color: #dce0e3f2;" class="navbar navbar-expand-lg navbar-light ">
-            <div class="navbar-brand">
-                <a href="#"><img src="/assets/img/logo.png" id="logo" alt="Logo"></a>
-                <div class="contenido-buscador d-none d-lg-flex">
-                    <button id="icono-busqueda"><img src="/assets/img/lupa.png" id="lupa"></button>
-                    <div id="buscador" style="display: none;">
-                        <form method="get" id="buscarform">
-                            <input type="text" id="inputaso" value="" placeholder="Buscar" />
-                        </form>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Título en móvil -->
-            <h1 class="titulo-movil d-lg-none mx-auto">Atlas Perfume</h1>
-
-            <!-- Botón para colapsar en dispositivos móviles -->
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <!-- Título y enlaces de navegación -->
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item d-lg-none">
-                        <a class="nav-link" href="/php/micesta.php">Mi Cesta</a>
-                    </li>
-                    <li class="nav-item d-lg-none">
-                        <a class="nav-link" href="/html/iniciarsesion.html">Entrar/Registrarse</a>
-                    </li>
-                    <li class="nav-item d-none d-lg-block">
-                        <a class="nav-link" href="/php/micesta.php">Mi Cesta</a>
-                    </li>
-                    <li class="nav-item d-none d-lg-block"><a class="nav-link"
-                            href="/html/iniciarsesion.html">Entrar/Registrarse</a></li>
-                </ul>
-            </div>
-
-            <!-- Título para escritorio -->
-            <h1 class="d-none d-lg-block">Atlas Perfume</h1>
-
-        </nav>
-    </header>
+    
+    <?php
+        include "../includes/header.php";
+    ?>
 
 
     <br><br>
@@ -63,14 +22,14 @@
         <!-- Hero Section: Perfume Principal -->
         <div class="row">
             <div class="col-md-6 text-center">
-                <a href="/perfumes/FraganceEiffel.html">
+                <a href="/perfumes/FraganceEiffel.php">
                     <img src="/assets/img/FraganceEiffel.png" alt="Perfume Principal" class="perfume-image">
                 </a>
             </div>
             <div class="col-md-6 d-flex flex-column justify-content-center align-items-center align-items-md-start">
                 <h2 class="perfume-title">Descubre tu Fragancia Única</h2>
                 <p class="perfume-subtitle">La esencia que te define</p>
-                <a href="/perfumes/FraganceEiffel.html">
+                <a href="/perfumes/FraganceEiffel.php">
                     <button class="btn btn-primary perfume-button">Ver Colección</button>
                 </a>
             </div>
@@ -82,7 +41,7 @@
             <div class="row carousel" id="carousel">
                 <!-- Producto 1 -->
                 <div class="col-md-3 col-12 product-card">
-                    <a href="/perfumes/EscadaParadise.html">
+                    <a href="/perfumes/EscadaParadise.php">
                         <img src="/assets/img/EscadaParadise.png" alt="Escada Paradise" class="product-image">
                         <h4>Escada Paradise</h4>
                     </a>
@@ -95,7 +54,7 @@
 
                 <!-- Producto 2 -->
                 <div class="col-md-3 product-card">
-                    <a href="/perfumes/IrohaNature.html">
+                    <a href="/perfumes/IrohaNature.php">
                         <img src="/assets/img/IrohaNature.png" alt="Iroha Nature " class="product-image">
                         <h4>Iroha Nature</h4>
                     </a>
@@ -108,7 +67,7 @@
 
                 <!-- Producto 3 -->
                 <div class="col-md-3 product-card">
-                    <a href="/perfumes/Dolce&Gabbana.html">
+                    <a href="/perfumes/Dolce&Gabbana.php">
                         <img src="/assets/img/Dolce&Gabbana.png" alt="Dolce & Gabbana" class="product-image">
                         <h4>Dolce & Gabbana</h4>
                     </a>
@@ -121,7 +80,7 @@
 
                 <!-- Producto 5 (oculto inicialmente) -->
                 <div class="col-md-3 product-card ocult-product">
-                    <a href="/perfumes/TalianiPizzini.html">
+                    <a href="/perfumes/TalianiPizzini.php">
                         <img src="/assets/img/TalianiPizzini.jpg" alt="Taliani Pizzini" class="product-image">
                         <h4>Taliani Pizzini</h4>
                     </a>
@@ -134,7 +93,7 @@
 
                 <!-- Producto 6 (oculto inicialmente) -->
                 <div class="col-md-3 product-card ocult-product">
-                    <a href="/perfumes/PerfumSalam.html">
+                    <a href="/perfumes/PerfumSalam.php">
                         <img src="/assets/img/PerfumSalam.png" alt="PerfumSalam" class="product-image">
                         <h4>Perfum Salam </h4>
                     </a>
@@ -169,7 +128,7 @@
             <section class="contenedor-pais">
                 <!-- Aquí agregarías los productos de Francia -->
                 <div class="col-md-3 product-card2">
-                    <a href="/perfumes/FraganceEiffel.html">
+                    <a href="/perfumes/FraganceEiffel.php">
                         <img src="/assets/img/FraganceEiffel.png" alt="Fragance Eiffel" class="product-image">
                         <h4>Fragance Eiffel</h4>
                     </a>
@@ -179,7 +138,7 @@
                     </div>
                 </div>
                 <div class="col-md-3 product-card2">
-                    <a href="/perfumes/EscadaParadise.html">
+                    <a href="/perfumes/EscadaParadise.php">
                         <img src="/assets/img/EscadaParadise.png" alt="Escada Paradise" class="product-image">
                         <h4>Escada Paradise</h4>
                     </a>
@@ -196,7 +155,7 @@
             <h3>Perfumes de Italia</h3>
             <section class="contenedor-pais">
                 <div class="col-md-3 product-card2">
-                    <a href="/perfumes/TalianiPizzini.html">
+                    <a href="/perfumes/TalianiPizzini.php">
                         <img src="/assets/img/TalianiPizzini.jpg" alt="Taliani Pizzini" class="product-image">
                         <h4>Taliani Pizzini</h4>
                     </a>
@@ -207,7 +166,7 @@
                 </div>
 
                 <div class="col-md-3 product-card2">
-                    <a href="/perfumes/Dolce&Gabbana.html">
+                    <a href="/perfumes/Dolce&Gabbana.php">
                         <img src="/assets/img/Dolce&Gabbana.png" alt="Dolce & Gabbana" class="product-image">
                         <h4>Dolce & Gabbana</h4>
                     </a>
@@ -223,7 +182,7 @@
             <h3>Perfumes de Japón</h3>
             <section class="contenedor-pais">
                 <div class="col-md-3 product-card2">
-                    <a href="/perfumes/Pirin-kun.html">
+                    <a href="/perfumes/Pirin-kun.php">
                         <img src="/assets/img/Pirin-kun.png" alt="Pirin-kun" class="product-image">
                         <h4>Pirin-kun</h4>
                     </a>
@@ -234,7 +193,7 @@
                 </div>
 
                 <div class="col-md-3 product-card2">
-                    <a href="/perfumes/IrohaNature.html">
+                    <a href="/perfumes/IrohaNature.php">
                         <img src="/assets/img/IrohaNature.png" alt="Iroha Nature " class="product-image">
                         <h4>Iroha Nature</h4>
                     </a>
@@ -250,7 +209,7 @@
             <h3>Perfumes de Marruecos</h3>
             <section class="contenedor-pais">
                 <div class="col-md-3 product-card2">
-                    <a href="/perfumes/BlackPolice.html">
+                    <a href="/perfumes/BlackPolice.php">
                         <img src="/assets/img/BlackPolice.png" alt="Black Police" class="product-image">
                         <h4>Black Police</h4>
                     </a>
@@ -260,7 +219,7 @@
                     </div>
                 </div>
                 <div class="col-md-3 product-card2">
-                    <a href="/perfumes/PerfumSalam.html">
+                    <a href="/perfumes/PerfumSalam.php">
                         <img src="/assets/img/PerfumSalam.png" alt="PerfumSalam" class="product-image">
                         <h4>Perfum Salam</h4>
                     </a>
@@ -275,40 +234,9 @@
     </main>
     
     <br><br>
-    <footer id="footer">
-        <div class="row">
-            <div class="col-md-4">
-                <h2>Información Legal</h2>
-                <p><a href="/terminos/terminos.html">Términos y Condiciones</a></p>
-                <p><a href="/terminos/privacidad.html">Política de Privacidad</a></p>
-            </div>
-
-            <div class="col-md-4">
-                <h2>Contáctanos</h2>
-                <p>Email: <a href="mailto:atlasperfume@gmail.com">atlasperfume@gmail.com</a></p>
-                <p>Teléfono: <a href="tel:+34945884633">945-084-633</a></p>
-            </div>
-
-            <div class="col-md-4">
-                <h2>Redes</h2>
-                <div class="redes-sociales-icons">
-                    <a href="https://www.reddit.com/user/AtlasPerfume/" target="_blank">Reddit
-                    </a>
-                    <a href="https://www.instagram.com/AtlasPerfume/" target="_blank">Instagram
-                    </a>
-                    <a href="https://x.com/AtlasPerfume" target="_blank">X
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-12 text-center">
-                <p>___________________________________________________________________</p>
-                <p>Copyright &copy; 2025 Atlas Perfumes - All rights reserved</p>
-            </div>
-        </div>
-    </footer>
+    <?php
+        include "../includes/footer.php";
+    ?>
 
     <!-- Bootstrap JS (jQuery, Popper.js, Bootstrap JS) -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

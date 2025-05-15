@@ -1,0 +1,23 @@
+body{
+    background-color: #08335e;
+    color: white;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3 p, table {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table, th, td, tr {
+    border: 1px solid white;
+    padding: 8px;
+}

@@ -17,6 +17,8 @@ if (!isset($_SESSION['cesta']) || empty($_SESSION['cesta'])) {
         $stmt->execute();
         $res = $stmt->get_result()->fetch_assoc();
 
+
+        $stock = $res['stock'];
         $nombre = $res['nombre'];
         $precio = $res['precio'];
         $subtotal = $precio * $cantidad;
@@ -45,43 +47,10 @@ if (!isset($_SESSION['cesta']) || empty($_SESSION['cesta'])) {
 </head>
 
 <body>
-
-    <header>
-        <nav style="border-radius: 20px; background-color: #dce0e3f2;" class="navbar navbar-expand-lg navbar-light ">
-            <div class="navbar-brand">
-                <a href="/html/perfume.html"><img src="/assets/img/logo.png" id="logo" alt="Logo"></a>
-            </div>
-
-            <!-- Título en móvil -->
-            <h1 class="titulo-movil d-lg-none mx-auto">Atlas Perfume</h1>
-
-            <!-- Botón para colapsar en dispositivos móviles -->
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <!-- Título y enlaces de navegación -->
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item d-lg-none">
-                        <a class="nav-link" href="/html/micesta.html">Mi Cesta</a>
-                    </li>
-                    <li class="nav-item d-lg-none">
-                        <a class="nav-link" href="/html/iniciarsesion.html">Entrar/Registrarse</a>
-                    </li>
-                    <li class="nav-item d-none d-lg-block"><a class="nav-link" href="/html/micesta.html">Mi Cesta</a>
-                    </li>
-                    <li class="nav-item d-none d-lg-block"><a class="nav-link"
-                            href="/html/iniciarsesion.html">Entrar/Registrarse</a></li>
-                </ul>
-            </div>
-
-            <!-- Título para escritorio -->
-            <h1 class="d-none d-lg-block">Atlas Perfume</h1>
-
-        </nav>
-    </header>
+    
+    <?php
+        include "../includes/header2.php";
+    ?>
 
 
     <main class="mt-5 container-cesta ">
@@ -107,49 +76,9 @@ if (!isset($_SESSION['cesta']) || empty($_SESSION['cesta'])) {
         </div>
     </main>
 
-    <footer id="footer">
-
-        <div class="row">
-
-            <div class="col-md-4">
-                <h2>Información Legal</h2>
-                <p><a href="#">Términos y Condiciones</a></p>
-                <p><a href="#">Política de Privacidad</a></p>
-            </div>
-
-            <div class="col-md-4">
-                <h2>Contáctanos</h2>
-                <p>Email: <a href="mailto:atlasperfume@gmail.com">atlasperfume@gmail.com</a></p>
-                <p>Teléfono: <a href="tel:+34945884633">945-084-633</a></p>
-            </div>
-
-            <div class="col-md-4">
-                <h2>Redes</h2>
-                <div class="redes-sociales-icons">
-                    <a href="https://www.reddit.com/user/NoCarob8347/" target="_blank">
-                        <img src="#" class="redes" alt="Reddit">
-                    </a>
-                    <a href="https://www.instagram.com/protectbird_/" target="_blank">
-                        <img src="#" class="redes" alt="Instagram">
-                    </a>
-                    <a href="https://x.com/ProtectBird_" target="_blank">
-                        <img src="#" class="redes" alt="Twitter">
-                    </a>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="row">
-
-            <div class="col-12 text-center">
-                <p>___________________________________________________________________</p>
-                <p>Copyright &copy; 2025 Atlas Perfumess - All rights reserved</p>
-            </div>
-
-        </div>
-
-    </footer>
+    <?php
+        include "../includes/footer.php";
+    ?>
 
     <!-- Bootstrap JS (jQuery, Popper.js, Bootstrap JS) -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

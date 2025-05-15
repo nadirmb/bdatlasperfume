@@ -2,18 +2,10 @@
 <html>
 
 <body>
-    <header>
+<header>
         <nav style="border-radius: 20px; background-color: #dce0e3f2;" class="navbar navbar-expand-lg navbar-light ">
             <div class="navbar-brand">
-                <a href="#"><img src="/assets/img/logo.png" id="logo" alt="Logo"></a>
-                <div class="contenido-buscador d-none d-lg-flex">
-                    <button id="icono-busqueda"><img src="/assets/img/lupa.png" id="lupa"></button>
-                    <div id="buscador" style="display: none;">
-                        <form method="get" id="buscarform">
-                            <input type="text" id="inputaso" value="" placeholder="Buscar" />
-                        </form>
-                    </div>
-                </div>
+                <a href="/php/perfume.php"><img src="/assets/img/logo.png" id="logo" alt="Logo"></a>
             </div>
 
             <!-- Título en móvil -->

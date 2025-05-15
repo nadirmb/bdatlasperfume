@@ -83,6 +83,11 @@ h1 {
     transition: transform 0.3s ease-in-out;
 }
 
+.perfume-image {
+    width: 52%;
+    height: auto;
+}
+
 .aromas-container {
     width: 100%;
     max-width: 900px;

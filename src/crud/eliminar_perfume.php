@@ -15,3 +15,4 @@ $stmt2->execute();
 
 echo "eliminado<br><a href='/crud/listar_perfumes.php'>volver</a>";
 ?>
+
