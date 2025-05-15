@@ -1,3 +1,37 @@
+<?php
+session_start();
+include '../php/bdconexion.php';
+
+// si no hay productos
+if (!isset($_SESSION['cesta']) || empty($_SESSION['cesta'])) {
+    $productosHTML = "<p>No hay productos en tu cesta.</p>";
+    $total = 0;
+} else {
+    $productosHTML = "";
+    $total = 0;
+
+    foreach ($_SESSION['cesta'] as $id_perfume => $cantidad) {
+        $sql = "SELECT nombre, precio FROM perfume WHERE id_perfume = ?";
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param("i", $id_perfume);
+        $stmt->execute();
+        $res = $stmt->get_result()->fetch_assoc();
+
+        $nombre = $res['nombre'];
+        $precio = $res['precio'];
+        $subtotal = $precio * $cantidad;
+        $total += $subtotal;
+
+        // añadimos cada perfume al HTML
+        $productosHTML .= "
+        <div class='list-group-item d-flex justify-content-between align-items-center border-bottom py-3'>
+            <span class='font-weight-bold'>{$nombre} x{$cantidad}</span>
+            <span class='text-primary'>{$subtotal} euros</span>
+        </div>";
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html>
 

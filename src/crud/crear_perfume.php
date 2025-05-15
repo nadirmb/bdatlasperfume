@@ -1,5 +1,5 @@
 <?php
-include '/php/bdconexion.php'; // conectar a bd
+include '../php/bdconexion.php'; // conectar a bd
 
 $nombre = $_POST['nombre'];
 $precio = $_POST['precio'];
