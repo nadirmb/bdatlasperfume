@@ -92,20 +92,18 @@ if (!isset($_SESSION['cesta']) || empty($_SESSION['cesta'])) {
             <h5 class="mb-3 font-weight-bold">Productos en tu carrito</h5>
             <div id="lista-productos" class="list-group">
                 <!-- Producto de ejemplo -->
-                <div class="list-group-item d-flex justify-content-between align-items-center border-bottom py-3">
-                    <span class="font-weight-bold">Perfume de muestra</span>
-                    <span class="text-primary">29.99 euros</span>
-                </div>
+             <?php echo $productosHTML; ?>
             </div>
         </div>
 
         <!-- Total y finalizar compra -->
         <div class="card p-4 text-center shadow-sm">
             <h5 class="mb-3 font-weight-bold">Total de la compra:</h5>
-            <p id="total-precio" class="font-weight-bold text-danger">0.00 euros</p>
-            <a href="/html/pagoonline.html" >
+            <p id="total-precio" class="font-weight-bold text-danger"><?php echo number_format($total, 2); ?> euros</p>
+            <form action="/php/finalizar_compra.php" method="POST">
                 <button id="finalizar-compra" class="btn btn-success btn-lg">Finalizar Compra</button>
-            </a>
+            </form>
+
         </div>
     </main>
 
