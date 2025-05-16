@@ -41,6 +41,7 @@
                     <li class="nav-item d-none d-lg-block">
                         <a class="nav-link" href="/html/iniciarsesion.html">Entrar/Registrarse</a>
                     </li>
+
                 <?php endif; ?>
             </ul>
         </div>
